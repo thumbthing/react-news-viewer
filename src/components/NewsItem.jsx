@@ -32,7 +32,7 @@ const NewsItemBlock = styled.div`
   `;
 
   const NewsItem = ({ article }) => {
-    const { title, decription, url, urlToImage } = article;
+    const { title, description, url, urlToImage } = article;
     return (
       <NewsItemBlock>
         {urlToImage && (
@@ -48,7 +48,7 @@ const NewsItemBlock = styled.div`
               {title}
             </a>
           </h2>
-          <p>{decription}</p>
+          <p>{description}</p>
         </div>
       </NewsItemBlock>
     );
