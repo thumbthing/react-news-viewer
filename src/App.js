@@ -6,7 +6,7 @@ const App = () => {
   const onClick = async () => {
     try {
       const reponse = await axios.get(
-        'https://jsonplaceholder.typicode.com/todos/1',
+        'https://newsapi.org/v2/top-headlines?country=kr&apiKey=18aabb9a7f614975a1160cd8fb1b1296',
       );
       setData(reponse.data);
     } catch (error) {
@@ -19,7 +19,7 @@ const App = () => {
       <div>
         <button onClick={onClick}>불러오기</button>
       </div>
-      {data && <textarea rows={7} value={JSON.stringify(data, null, 2)} readOnly={true} />}
+      {data && <textarea rows={7} value={JSON.stringify(data, null, 2)} />}
     </div>
   );
 };
