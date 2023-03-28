@@ -30,8 +30,10 @@ const NewsList = () => {
         setArticles(response.data.articles);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
+      
     };
     fetchData();
   }, []);
